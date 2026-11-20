@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #FAF8F5;
+    color: #1E293B;
+  }
+
+  .font-arabic {
+    font-family: 'Amiri', Georgia, serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    line-height: 2.05;
+  }
+}
+
+@layer utilities {
+  .parchment-surface {
+    background-color: #FAF8F5;
+    background-image:
+      radial-gradient(at 15% 10%, rgba(197, 155, 39, 0.05) 0px, transparent 50%),
+      radial-gradient(at 85% 20%, rgba(15, 61, 62, 0.04) 0px, transparent 50%);
+  }
+
+  .card-surface {
+    @apply bg-white border border-[#E8E4DC] rounded-2xl shadow-soft;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #D5CFC4;
+    border-radius: 9999px;
+  }
+}
